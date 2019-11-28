@@ -18,4 +18,5 @@ jobs:
           args: release --rm-dist
           key: ${{ secrets.YOUR_PRIVATE_KEY }}
         env:
+          GOPROXY: "https://proxy.golang.org"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
