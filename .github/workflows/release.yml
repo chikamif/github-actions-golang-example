@@ -1,22 +1,17 @@
+name: Releae
 on:
   create:
     tags:
       - v*.*.*
-# on:
-#   release:
-#     types: [published]
-name: Release
+jobs:
   goreleaser:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@master
-      -
-        name: Set up Go
+      - name: Set up Go
         uses: actions/setup-go@master
-      -
-        name: Run GoReleaser
+      - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v1
         with:
           version: latest
