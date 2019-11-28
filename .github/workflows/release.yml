@@ -1,4 +1,4 @@
-name: Releae
+name: Release
 on:
   create:
     tags:
