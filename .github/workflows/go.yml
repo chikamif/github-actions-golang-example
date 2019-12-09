@@ -22,3 +22,5 @@ jobs:
         env:
           GOPROXY: "https://proxy.golang.org"
         run: go test -v .
+      - name: Ping
+        run: ping -c 1 micro.fms-alpha.com
